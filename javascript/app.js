@@ -12,7 +12,8 @@ $.ajax(settings).done(function(response) {
   console.log(response);
 });
 
-function getSignInfo() {
+$("#submit").on("click", function() {
+  event.preventDefault();
   var day = $("#day")
     .val()
     .trim();
@@ -22,6 +23,9 @@ function getSignInfo() {
   var year = $("#year")
     .val()
     .trim();
+  console.log(day);
+  console.log(month);
+  console.log(year);
 
   if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
     console.log("Aquarius");
@@ -92,8 +96,8 @@ function getSignInfo() {
   if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
     console.log("capricorn");
   }
-  if (month == 12 && day > 31) {
+  if (month == 12 && day > 31);
+  {
     alert("invalid date");
   }
-}
-getSignInfo();
+});
