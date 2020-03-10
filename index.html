@@ -1,73 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Project 1</title>
-    <link rel="stylesheet" href="css/styles.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project 1</title>
+  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
 
-  <body>
-    <header>
-      <!-- can create a list of tab that can direct to another space or have everything in one page  -->
-      <nav>
-        <ul>
-          <li><a href="#">intro</a></li>
-          <li><a href="#">infoaboutbday</a></li>
-          <li><a href="#">quotesoftheday</a></li>
-          <li><a href="#">funnygifs</a></li>
-        </ul>
-      </nav>
-      <img src="img/plant.png" alt="plant" class="plant" />
+</head>
+
+<body>
+  <header>
+    <!-- can create a list of tab that can direct to another space or have everything in one page  -->
+    <nav>
+      <ul>
+        <li><a href="#">intro</a></li>
+        <li><a href="#">infoaboutbday</a></li>
+        <li><a href="#">quotesoftheday</a></li>
+        <li><a href="#">funnygifs</a></li>
+      </ul>
+    </nav>
+    <img src="img/plant.png" alt="plant" class="plant" />
     <section class="divider">
       <h2>Enter your birthday<br>get information <br>about your special day</h2>
     </section>
     <img src="img/plant.png" alt="plant" class="plant-background" />
     <img src="img/plant.png" alt="plant" class="plant-background bottom" />
-    <img src="img/character.png" alt="" class="character"/>
-    </header>
-    <div class="container">
-      <section class="row">
-    <div class="centered">
-      <form>
-        <div class="input-group mb-3">
-          <div class="input-group-prepend">
-            <span class="input-group-text">Month</span>
+    <img src="img/character.png" alt="" class="character" />
+  </header>
+  <div class="container">
+    <section class="row">
+      <div class="centered">
+        <form>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Month</span>
+            </div>
+            <input type="text" class="form-control" placeholder="MM">
+            <div class="input-group-prepend">
+              <span class="input-group-text">Day</span>
+            </div>
+            <input type="text" class="form-control" placeholder="DD">
           </div>
-          <input type="text" class="form-control" placeholder="MM">
           <div class="input-group-prepend">
-            <span class="input-group-text">Day</span>
+            <span class="input-group-text">Year</span>
           </div>
-          <input type="text" class="form-control" placeholder="DD">
-        </div>  
-        <div class="input-group-prepend">
-          <span class="input-group-text">Year</span>
-        </div>
           <input type="text" class="form-control" id="year" placeholder="YYYY">
-        </div>  
-        <br>
-        <button type="submit" class="btn btn-default" id="submit"> Submit </button>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-default" id="submit"> Submit </button>
       </form>
 
-    <p class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
-      suscipit fugit quis accusamus beatae voluptatibus reprehenderit ipsa
-      perspiciatis aut natus, laboriosam nostrum eveniet quae? Soluta
-      praesentium est magnam. Dolorem, id?
-    </p>
-    </div>
-    </section>
-    <!-- <img
+      <p class="intro">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+        suscipit fugit quis accusamus beatae voluptatibus reprehenderit ipsa
+        perspiciatis aut natus, laboriosam nostrum eveniet quae? Soluta
+        praesentium est magnam. Dolorem, id?
+      </p>
+  </div>
+  </section>
+  <!-- <img
       src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR2SRJMlZlCtCsFcrzeFIYzJQXzYKDxbKRWQIkIQ9mbTbGPH4ZZJZqxaLOVOP92m3qaXx806GU&usqp=CAc"
       alt="computer"
     /> -->
-    <script src="./javascript/app.js"></script>
-  </body>
+
+  <!-- javascript -->
+  <script src="./javascript/app.js"></script>
+  <script src="./javascript/wikiAPI.js"></script>
+</body>
+
 </html>
