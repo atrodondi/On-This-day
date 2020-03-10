@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project 1</title>
     <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:400,600,700&display=swap" rel="stylesheet">
@@ -35,6 +36,25 @@
     <div class="container">
       <section class="row">
     <div class="centered">
+      <form>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Month</span>
+          </div>
+          <input type="text" class="form-control" placeholder="MM">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Day</span>
+          </div>
+          <input type="text" class="form-control" placeholder="DD">
+        </div>  
+        <div class="input-group-prepend">
+          <span class="input-group-text">Year</span>
+        </div>
+          <input type="text" class="form-control" id="year" placeholder="YYYY">
+        </div>  
+        <br>
+        <button type="submit" class="btn btn-default" id="submit"> Submit </button>
+      </form>
 
     <p class="intro">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
