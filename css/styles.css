@@ -64,7 +64,22 @@ body {
     width: 500px;
     top: 260px;
   }
-  
+  .character {
+    height: 500px;
+    position: absolute;
+    bottom: 0;
+    right: 300px;
+    z-index: 0;
+    animation: character 3s infinite;
+    transform: translateY(50px);
+  }
+
+  @keyframes character {
+    50% {
+      transform: translateY(-20px);
+    }
+  } 
+
   .plant-background.bottom {
     top: 530px;
     transform: rotate(-170deg);
@@ -79,4 +94,18 @@ body {
   
   .plant.right {
     top: 2200px;
+  }
+
+  header {
+    height: 800px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+    position: relative;
+    background-color: #f3b70f;
   }
