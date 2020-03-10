@@ -80,3 +80,17 @@ body {
   .plant.right {
     top: 2200px;
   }
+
+  header {
+    height: 800px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-attachment: fixed;
+    position: relative;
+    background-color: #f3b70f;
+  }
