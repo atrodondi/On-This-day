@@ -10,7 +10,7 @@ $(document).ready(function(){
     };
     date_input.datepicker(options);
   })
-
+// for the collapsible section
   var coll = document.getElementsByClassName("collapsible");
 var i;
 
