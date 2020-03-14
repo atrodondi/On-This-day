@@ -7,16 +7,15 @@ $(".btn-primary").on("click", function() {
   console.log(input);
 
   var day = moment(input).format("DD");
-  console.log("Day: " + day);
   var month = moment(input).format("MM");
-  console.log("Month: " + month);
   var year = moment(input).format("YYYY");
-  console.log("Year: " + year);
   var sign = "";
   var lifePath;
   var LPdisplay;
   var signDisplay = "";
   var image;
+  var str;
+  var wk;
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<ASTROLOGICAL SIGN>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   function astro() {
     if ((month == 1 && day >= 20 && day <= 31) || (month == 2 && day <= 18)) {
@@ -58,9 +57,8 @@ $(".btn-primary").on("click", function() {
     }
   }
   astro();
-  // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<ASTROLOGICAL SIGN>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
-  // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-----NUMEROLOGY ------->>>>>>>>>>>>>>>>>
+  // <<<<<<<<<<<<<<<<<Lifepath calculations & DOM MANIPULATION>>>>>>>>>>>>>>
   function numero() {
     var yearSUM = 0;
     var daySum = 0;
@@ -164,53 +162,78 @@ $(".btn-primary").on("click", function() {
     if (lifePath == 33) {
       LPdisplay = lifePathInfo.thirtythree;
     }
+    //<<<<<selecting the content based on zodiac sign from date input>>>>>
     if (sign == "Aquarius") {
       signDisplay = signInfo.aquarius;
       image = signInfo.aquariusPic;
+      str = signInfo.aquariusStr;
+      wk = signInfo.aquariusWk;
     }
     if (sign == "Pisces") {
       signDisplay = signInfo.pisces;
       image = signInfo.piscesPic;
+      str = signInfo.piscesStr;
+      wk = signInfo.piscesWk;
     }
     if (sign == "Aries") {
       signDisplay = signInfo.aries;
       image = signInfo.ariesPic;
+      str = signInfo.ariesStr;
+      wk = signInfo.ariesWk;
     }
     if (sign == "Taurus") {
       signDisplay = signInfo.taurus;
       image = signInfo.taurusPic;
+      str = signInfo.taurusStr;
+      wk = signInfo.taurusWk;
     }
     if (sign == "Gemini") {
       signDisplay = signInfo.gemini;
       image = signInfo.geminiPic;
+      str = signInfo.geminiStr;
+      wk = signInfo.geminiWk;
     }
     if (sign == "Cancer") {
       signDisplay = signInfo.cancer;
       image = signInfo.cancerPic;
+      str = signInfo.cancerStr;
+      wk = signInfo.cancerWk;
     }
     if (sign == "Leo") {
       signDisplay = signInfo.leo;
       image = signInfo.leoPic;
+      str = signInfo.leoStr;
+      wk = signInfo.leoWk;
     }
     if (sign == "Virgo") {
       signDisplay = signInfo.virgo;
       image = signInfo.virgoPic;
+      str = signInfo.virgoStr;
+      wk = signInfo.virgoWk;
     }
     if (sign == "Libra") {
       signDisplay = signInfo.libra;
       image = signInfo.libraPic;
+      str = signInfo.libraStr;
+      wk = signInfo.libraWk;
     }
     if (sign == "Scorpio") {
       signDisplay = signInfo.scorpio;
       image = signInfo.scorpioPic;
+      str = signInfo.scorpioStr;
+      wk = signInfo.scorpioWk;
     }
     if (sign == "Sagittarius") {
       signDisplay = signInfo.sagittarius;
       image = signInfo.sagittariusPic;
+      str = signInfo.sagittariusStr;
+      wk = signInfo.sagittariusWk;
     }
     if (sign == "Capricorn") {
       signDisplay = signInfo.capricorn;
       image = signInfo.capricornPic;
+      str = signInfo.capricornStr;
+      wk = signInfo.capricornWk;
     }
 
     $(".content4").append(
@@ -222,7 +245,11 @@ $(".btn-primary").on("click", function() {
         LPdisplay +
         "</li><br><img  class ='img img-fluid' src='" +
         image +
-        "' <br><li> You're Zodiac Sign is: " +
+        "'</img> <div class='d-inline '><p>Strengths</p><li>" +
+        str +
+        "</li><br><p>Weaknesses</p><li>" +
+        wk +
+        "</li></div><br><li> You're Zodiac Sign is: " +
         sign +
         "</li>" +
         "<li>" +
@@ -232,5 +259,4 @@ $(".btn-primary").on("click", function() {
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-----NUMEROLOGY ------->>>>>>>>>>>>>>>>>
   }
   numero();
-  console.log(sign);
 });
