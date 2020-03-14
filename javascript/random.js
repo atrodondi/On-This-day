@@ -5,6 +5,15 @@ $( '#search' ).on( 'click', function ()
 {
 
     event.preventDefault();
+    $( '.content2' ).empty();
+    getFact();
+    getBirthFacts();
+    getDeathFact();
+
+
+    // end click function function
+} )
+
 
     // Random Facts Search by Static Category
     var categories = [ 'dogs', 'animals', 'sports', 'food', 'rocks', 'cats', 'movies', 'plants', 'biography',
