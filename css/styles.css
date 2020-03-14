@@ -87,13 +87,13 @@ body {
   
   .plant-background.bottom.right {
     right: 0;
-    transform: rotate(20deg);
+    transform: rotate(160deg);
     left: auto;
-    top: 2000px;
+    top: 1600px;
   }
-  
+
   .plant.right {
-    top: 2200px;
+    top:900px;
   }
 
   header {
