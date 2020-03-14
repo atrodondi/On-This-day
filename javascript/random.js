@@ -15,9 +15,13 @@ $( '#search' ).on( 'click', function ()
 } )
 
 
+
+
+function getFact ()
+{
     // Random Facts Search by Static Category
-    var categories = [ 'dogs', 'animals', 'sports', 'food', 'rocks', 'cats', 'movies', 'plants', 'biography',
-        'countries', 'history', 'seas', 'rome', ' volcanoes' ]
+    var categories = [ 'dogs', 'sports', 'food', 'rocks', 'cats', 'movies', 'plants', 'biography',
+        'countries', 'history', 'seas', 'rome' ]
     var fact = categories[ Math.floor( Math.random() * categories.length ) ]
     var settings = {
         "async": true,
@@ -55,15 +59,15 @@ $( '#search' ).on( 'click', function ()
 
     } );
 
-    // end click function function
-} )
+}
 
 
 
 
 
 
-$( '#search' ).on( 'click', function ()
+
+function getDeathFact ()
 {
 
     // Grab Date
@@ -112,15 +116,15 @@ $( '#search' ).on( 'click', function ()
 
     } );
 
+}
 
-    // end click function function
-} )
+
 
 
 
 
 // Birth Facts
-$( '#search' ).on( 'click', function ()
+function getBirthFacts ()
 {
     // Grab Date
     var input = $( "#date" )
@@ -169,8 +173,8 @@ $( '#search' ).on( 'click', function ()
     } );
 
 
-    // end click function function
-} )
+}
+
 
 
 
