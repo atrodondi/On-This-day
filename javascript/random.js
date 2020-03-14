@@ -4,6 +4,7 @@ $( '#search' ).on( 'click', function ()
 {
 
     event.preventDefault();
+    $( '.content2' ).empty();
     getFact();
     getBirthFacts();
     getDeathFact();
