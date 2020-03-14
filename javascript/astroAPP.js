@@ -12,45 +12,49 @@ $(".btn-primary").on("click", function() {
   console.log("Month: " + month);
   var year = moment(input).format("YYYY");
   console.log("Year: " + year);
+  var sign = "";
+  var lifePath;
+  var LPdisplay;
+  var signDisplay = "";
+  var image;
   // <<<<<<<<<<<<<<<<<<<<<<<<<<<<<ASTROLOGICAL SIGN>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
   function astro() {
     if ((month == 1 && day >= 20 && day <= 31) || (month == 2 && day <= 18)) {
-      console.log("Aquarius");
+      sign = "Aquarius";
     }
     if ((month == 2 && day >= 19 && day <= 29) || (month == 3 && day <= 20)) {
-      console.log("Pisces");
+      sign = "Pisces";
     }
     if ((month == 3 && day >= 21 && day <= 31) || (month == 4 && day <= 19)) {
-      console.log("aries");
-      $(".content4").append("<img src='img/aries.jpg'>");
+      sign = "Aries";
     }
     if ((month == 4 && day >= 20 && day <= 30) || (month == 5 && day <= 20)) {
-      console.log("Taurus");
+      sign = "Taurus";
     }
     if ((month == 5 && day >= 21 && day <= 31) || (month == 6 && day <= 21)) {
-      console.log("gemini");
+      sign = "Gemini";
     }
 
     if ((month == 6 && day >= 22 && day <= 30) || (month == 7 && day <= 22)) {
-      console.log("cancer");
+      sign = "Cancer";
     }
     if ((month == 7 && day >= 23 && day <= 31) || (month == 8 && day <= 22)) {
-      console.log("leo");
+      sign = "Leo";
     }
     if ((month == 8 && day >= 23 && day <= 31) || (month == 9 && day <= 22)) {
-      console.log("virgo");
+      sign = "Virgo";
     }
     if ((month == 9 && day >= 23 && day <= 30) || (month == 10 && day <= 22)) {
-      console.log("libra");
+      sign = "Libra";
     }
     if ((month == 10 && day >= 23 && day <= 31) || (month == 11 && day <= 21)) {
-      console.log("scorpio");
+      sign = "Scorpio";
     }
     if ((month == 11 && day >= 22 && day <= 30) || (month == 12 && day <= 21)) {
-      console.log("Sagittarius");
+      sign = "Sagittarius";
     }
     if ((month == 12 && day >= 22 && day <= 31) || (month == 1 && day <= 19)) {
-      console.log("capricorn");
+      sign = "Capricorn";
     }
   }
   astro();
@@ -64,8 +68,6 @@ $(".btn-primary").on("click", function() {
     var yearReduced = 0;
     var dayReduced = 0;
     var monthReduced = 0;
-    var lifePath;
-    var LPdisplay;
 
     // reduces the year input value to a single digit, according to Numerology rules
     for (let i = 0; i < year.length; i++) {
@@ -162,21 +164,73 @@ $(".btn-primary").on("click", function() {
     if (lifePath == 33) {
       LPdisplay = lifePathInfo.thirtythree;
     }
+    if (sign == "Aquarius") {
+      signDisplay = signInfo.aquarius;
+      image = signInfo.aquariusPic;
+    }
+    if (sign == "Pisces") {
+      signDisplay = signInfo.pisces;
+      image = signInfo.piscesPic;
+    }
+    if (sign == "Aries") {
+      signDisplay = signInfo.aries;
+      image = signInfo.ariesPic;
+    }
+    if (sign == "Taurus") {
+      signDisplay = signInfo.taurus;
+      image = signInfo.taurusPic;
+    }
+    if (sign == "Gemini") {
+      signDisplay = signInfo.gemini;
+      image = signInfo.geminiPic;
+    }
+    if (sign == "Cancer") {
+      signDisplay = signInfo.cancer;
+      image = signInfo.cancerPic;
+    }
+    if (sign == "Leo") {
+      signDisplay = signInfo.leo;
+      image = signInfo.leoPic;
+    }
+    if (sign == "Virgo") {
+      signDisplay = signInfo.virgo;
+      image = signInfo.virgoPic;
+    }
+    if (sign == "Libra") {
+      signDisplay = signInfo.libra;
+      image = signInfo.libraPic;
+    }
+    if (sign == "Scorpio") {
+      signDisplay = signInfo.scorpio;
+      image = signInfo.scorpioPic;
+    }
+    if (sign == "Sagittarius") {
+      signDisplay = signInfo.sagittarius;
+      image = signInfo.sagittariusPic;
+    }
+    if (sign == "Capricorn") {
+      signDisplay = signInfo.capricorn;
+      image = signInfo.capricornPic;
+    }
 
     $(".content4").append(
-      "<h1> You're Life Path Number is : <strong>" +
+      "<li> You're Life Path Number is : <strong>" +
         lifePath +
         "</strong>    " +
+        "</li>" +
+        "<li>" +
         LPdisplay +
-        "</h1>"
+        "</li><br><img  class ='img img-fluid' src='" +
+        image +
+        "' <br><li> You're Zodiac Sign is: " +
+        sign +
+        "</li>" +
+        "<li>" +
+        signDisplay +
+        "</li>"
     );
     // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-----NUMEROLOGY ------->>>>>>>>>>>>>>>>>
-
-    // need to make a big chain of if lifepath = n, then lifePathInfo = x,y,z, etc. Object? to hold allinformation? doii
-
-    console.log(lifePathInfo.three);
   }
   numero();
+  console.log(sign);
 });
-
-// NEED TO: find out how they want the content boxes designed. wireframe of each content box, but i guess it doesn't matter? i could always change it. need to populate but change with every date change
