@@ -126,7 +126,7 @@ $(".btn-primary").on("click", function() {
     console.log("Life Path #: " + lifePath);
     for (let i = 0; i < lifePathInfo.length; i++) {
       if (lifePath == lifePathInfo[i].id) {
-        LPdisplay = lifePathInfo[lifePathInfo[i].id].info;
+        LPdisplay = lifePathInfo[i].info;
       }
     }
 
