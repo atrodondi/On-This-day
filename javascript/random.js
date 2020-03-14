@@ -74,25 +74,23 @@ $( '#search' ).on( 'click', function ()
 
 
 
-// Random Facts Categories
-var settings = {
-    "async": true,
-    "crossDomain": true,
-    "url": "https://random-facts1.p.rapidapi.com/fact/categories?start=1",
-    "method": "GET",
-    "headers": {
-        "x-rapidapi-host": "random-facts1.p.rapidapi.com",
-        "x-rapidapi-key": "18159348a7msh7e96e25624acf74p1172b1jsn8692563bd266",
-        "x-fungenerators-api-secret": "JPlrVnEh4Z1HyvYjhPmtDweF"
-    }
-}
+// // Random Facts Categories
+// var settings = {
+//     "async": true,
+//     "crossDomain": true,
+//     "url": "https://random-facts1.p.rapidapi.com/fact/categories?start=1",
+//     "method": "GET",
+//     "headers": {
+//         "x-rapidapi-host": "random-facts1.p.rapidapi.com",
+//         "x-rapidapi-key": "18159348a7msh7e96e25624acf74p1172b1jsn8692563bd266",
+//         "x-fungenerators-api-secret": "JPlrVnEh4Z1HyvYjhPmtDweF"
+//     }
+// }
 
-$.ajax( settings ).done( function ( response )
-{
-    console.log( response );
-} );
-
-
+// $.ajax( settings ).done( function ( response )
+// {
+//     console.log( response );
+// } );
 
 
 
@@ -103,18 +101,20 @@ $.ajax( settings ).done( function ( response )
 
 
 
-// Random Facts Search by Static Category
-var categories = [ 'dogs', 'animals', 'sports', 'food', 'rocks', 'cats', 'movies' ]
-var settings = {
-    "url": "http://api.fungenerators.com/fact/random?category=Countries&subcategory=USA",
-    "method": "GET",
-    "headers": {
-        "accept": "application/json",
-        "X-FunGenerators-Api-Secret": "JPlrVnEh4Z1HyvYjhPmtDwe"
-    }
-}
 
-$.ajax( settings ).done( function ( response )
-{
-    console.log( response );
-} );
+
+// // Random Facts Search by Static Category
+// var categories = [ 'dogs', 'animals', 'sports', 'food', 'rocks', 'cats', 'movies' ]
+// var settings = {
+//     "url": "http://api.fungenerators.com/fact/random?category=Countries&subcategory=USA",
+//     "method": "GET",
+//     "headers": {
+//         "accept": "application/json",
+//         "X-FunGenerators-Api-Secret": "JPlrVnEh4Z1HyvYjhPmtDwe"
+//     }
+// }
+
+// $.ajax( settings ).done( function ( response )
+// {
+//     console.log( response );
+// } );
