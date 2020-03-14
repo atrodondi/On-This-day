@@ -4,7 +4,6 @@ $(".btn-primary").on("click", function() {
   var input = $("#date")
     .val()
     .trim();
-  console.log(input);
 
   var day = moment(input).format("DD");
   var month = moment(input).format("MM");
@@ -56,9 +55,8 @@ $(".btn-primary").on("click", function() {
       sign = "Capricorn";
     }
   }
-  astro();
 
-  // <<<<<<<<<<<<<<<<<Lifepath calculations & DOM MANIPULATION>>>>>>>>>>>>>>
+  // <<<<<<<<<<<<<<<<<Lifepath calculations >>>>>>>>>>>>>>
   function numero() {
     var yearSUM = 0;
     var daySum = 0;
@@ -126,137 +124,45 @@ $(".btn-primary").on("click", function() {
     }
     //now use lifepath number below to correspond to a set of data in an array we can make from a website to populate DOM however.
     console.log("Life Path #: " + lifePath);
-    if (lifePath == 1) {
-      LPdisplay = lifePathInfo.one;
-    }
-    if (lifePath == 2) {
-      LPdisplay = lifePathInfo.two;
-    }
-    if (lifePath == 3) {
-      LPdisplay = lifePathInfo.three;
-    }
-    if (lifePath == 4) {
-      LPdisplay = lifePathInfo.four;
-    }
-    if (lifePath == 5) {
-      LPdisplay = lifePathInfo.five;
-    }
-    if (lifePath == 6) {
-      LPdisplay = lifePathInfo.six;
-    }
-    if (lifePath == 7) {
-      LPdisplay = lifePathInfo.seven;
-    }
-    if (lifePath == 8) {
-      LPdisplay = lifePathInfo.eight;
-    }
-    if (lifePath == 9) {
-      LPdisplay = lifePathInfo.nine;
-    }
-    if (lifePath == 11) {
-      LPdisplay = lifePathInfo.eleven;
-    }
-    if (lifePath == 22) {
-      LPdisplay = lifePathInfo.twentytwo;
-    }
-    if (lifePath == 33) {
-      LPdisplay = lifePathInfo.thirtythree;
-    }
-    //<<<<<selecting the content based on zodiac sign from date input>>>>>
-    if (sign == "Aquarius") {
-      signDisplay = signInfo.aquarius;
-      image = signInfo.aquariusPic;
-      str = signInfo.aquariusStr;
-      wk = signInfo.aquariusWk;
-    }
-    if (sign == "Pisces") {
-      signDisplay = signInfo.pisces;
-      image = signInfo.piscesPic;
-      str = signInfo.piscesStr;
-      wk = signInfo.piscesWk;
-    }
-    if (sign == "Aries") {
-      signDisplay = signInfo.aries;
-      image = signInfo.ariesPic;
-      str = signInfo.ariesStr;
-      wk = signInfo.ariesWk;
-    }
-    if (sign == "Taurus") {
-      signDisplay = signInfo.taurus;
-      image = signInfo.taurusPic;
-      str = signInfo.taurusStr;
-      wk = signInfo.taurusWk;
-    }
-    if (sign == "Gemini") {
-      signDisplay = signInfo.gemini;
-      image = signInfo.geminiPic;
-      str = signInfo.geminiStr;
-      wk = signInfo.geminiWk;
-    }
-    if (sign == "Cancer") {
-      signDisplay = signInfo.cancer;
-      image = signInfo.cancerPic;
-      str = signInfo.cancerStr;
-      wk = signInfo.cancerWk;
-    }
-    if (sign == "Leo") {
-      signDisplay = signInfo.leo;
-      image = signInfo.leoPic;
-      str = signInfo.leoStr;
-      wk = signInfo.leoWk;
-    }
-    if (sign == "Virgo") {
-      signDisplay = signInfo.virgo;
-      image = signInfo.virgoPic;
-      str = signInfo.virgoStr;
-      wk = signInfo.virgoWk;
-    }
-    if (sign == "Libra") {
-      signDisplay = signInfo.libra;
-      image = signInfo.libraPic;
-      str = signInfo.libraStr;
-      wk = signInfo.libraWk;
-    }
-    if (sign == "Scorpio") {
-      signDisplay = signInfo.scorpio;
-      image = signInfo.scorpioPic;
-      str = signInfo.scorpioStr;
-      wk = signInfo.scorpioWk;
-    }
-    if (sign == "Sagittarius") {
-      signDisplay = signInfo.sagittarius;
-      image = signInfo.sagittariusPic;
-      str = signInfo.sagittariusStr;
-      wk = signInfo.sagittariusWk;
-    }
-    if (sign == "Capricorn") {
-      signDisplay = signInfo.capricorn;
-      image = signInfo.capricornPic;
-      str = signInfo.capricornStr;
-      wk = signInfo.capricornWk;
+    for (let i = 0; i < lifePathInfo.length; i++) {
+      if (lifePath == lifePathInfo[i].id) {
+        LPdisplay = lifePathInfo[lifePathInfo[i].id].info;
+      }
     }
 
+    //<<<<<selecting the content based on zodiac sign from date input>>>>>
+
+    for (let i = 0; i < signInfo.length; i++) {
+      if (sign == signInfo[i].name) {
+        signDisplay = signInfo[i].info;
+        image = signInfo[i].image;
+        str = signInfo[i].str;
+        wk = signInfo[i].wk;
+      }
+    }
+  }
+  function display() {
     $(".content4").append(
       "<li> You're Life Path Number is : <strong>" +
         lifePath +
         "</strong>    " +
-        "</li>" +
-        "<li>" +
+        "</li><li>" +
         LPdisplay +
-        "</li><br><img  class ='img img-fluid' src='" +
+        "</li><br><li> You're Zodiac Sign is: " +
+        sign +
+        "</li>" +
+        "<img  class ='img img-fluid' src='" +
         image +
         "'</img> <div class='d-inline '><p>Strengths</p><li>" +
         str +
         "</li><br><p>Weaknesses</p><li>" +
         wk +
-        "</li></div><br><li> You're Zodiac Sign is: " +
-        sign +
-        "</li>" +
-        "<li>" +
+        "</li></div><br><li>" +
         signDisplay +
         "</li>"
     );
-    // >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>-----NUMEROLOGY ------->>>>>>>>>>>>>>>>>
   }
+  astro();
   numero();
+  display();
 });
