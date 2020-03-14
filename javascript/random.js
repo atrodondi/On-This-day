@@ -1,24 +1,11 @@
 
 
+
 $( '#search' ).on( 'click', function ()
 {
 
     event.preventDefault();
-    getFact();
-    getBirthFacts();
-    getDeathFact();
 
-
-    // end click function function
-} )
-
-
-
-
-
-// Get Fact Function
-function getFact ()
-{
     // Random Facts Search by Static Category
     var categories = [ 'dogs', 'animals', 'sports', 'food', 'rocks', 'cats', 'movies', 'plants', 'biography',
         'countries', 'history', 'seas', 'rome', ' volcanoes' ]
@@ -58,14 +45,17 @@ function getFact ()
         $( '.content2' ).append( factdiv );
 
     } );
-}
+
+    // end click function function
+} )
 
 
 
-// Get Birth Fact Function
-function getBirthFacts ()
+
+
+
+$( '#search' ).on( 'click', function ()
 {
-
 
     // Grab Date
     var input = $( "#date" )
@@ -73,6 +63,63 @@ function getBirthFacts ()
         .trim();
     var inputday = moment( input ).format( "DD" );
     var inputmonth = moment( input ).format( "MM" );
+    var inputyear = moment( input ).format( "YYYY" );
+    var date = inputday + "&month=" + inputmonth
+
+
+
+    // Ajax setup for Death Facts
+    var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://random-facts1.p.rapidapi.com/fact/onthisday/died?day=" + date,
+        "method": "GET",
+        "headers": {
+            "x-rapidapi-host": "random-facts1.p.rapidapi.com",
+            "x-rapidapi-key": "7e010bc9b6mshd358f254848b55ap1c1c7fjsna19302327c55",
+            "x-fungenerators-api-secret": "JPlrVnEh4Z1HyvYjhPmtDweF"
+        }
+    }
+
+
+
+
+    $.ajax( settings ).done( function ( response )
+    {
+        // retrieve search information
+        var person = response.contents[ 0 ];
+        var name = response.contents[ 0 ].name
+        var occupation = response.contents[ 0 ].occupation
+        var note = response.contents[ 0 ].notable
+        var died = response.contents[ 0 ].died
+
+        // Create Virtual Page Content
+        var dieddiv = $( '<div>' ).attr( 'id', 'ranperson' ).text( 'Died On This Day' );
+        var pname = $( '<p>' ).attr( 'id', 'ranname' ).text( "Name: " + name );
+        var pocc = $( '<p>' ).attr( 'id', 'ranocc' ).text( "Occucation: " + occupation );
+        var pnote = $( '<p>' ).attr( 'id', 'rannote' ).text( "Noteworthyness: " + note );
+        dieddiv.append( pname, pocc, pnote );
+        $( '.content2' ).append( dieddiv );
+
+    } );
+
+
+    // end click function function
+} )
+
+
+
+
+// Birth Facts
+$( '#search' ).on( 'click', function ()
+{
+    // Grab Date
+    var input = $( "#date" )
+        .val()
+        .trim();
+    var inputday = moment( input ).format( "DD" );
+    var inputmonth = moment( input ).format( "MM" );
+    var inputyear = moment( input ).format( "YYYY" );
     var date = inputday + "&month=" + inputmonth
 
 
@@ -112,57 +159,18 @@ function getBirthFacts ()
 
     } );
 
-}
 
-
-// Get Death Facts
-function getDeathFact ()
-{
-    // Grab Date
-    var input = $( "#date" )
-        .val()
-        .trim();
-    var inputday = moment( input ).format( "DD" );
-    var inputmonth = moment( input ).format( "MM" );
-    var date = inputday + "&month=" + inputmonth
-
-
-
-    // Ajax setup for Death Facts
-    var settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "https://random-facts1.p.rapidapi.com/fact/onthisday/died?day=" + date,
-        "method": "GET",
-        "headers": {
-            "x-rapidapi-host": "random-facts1.p.rapidapi.com",
-            "x-rapidapi-key": "7e010bc9b6mshd358f254848b55ap1c1c7fjsna19302327c55",
-            "x-fungenerators-api-secret": "JPlrVnEh4Z1HyvYjhPmtDweF"
-        }
-    }
+    // end click function function
+} )
 
 
 
 
-    $.ajax( settings ).done( function ( response )
-    {
-        // retrieve search information
-        var name = response.contents[ 0 ].name
-        var occupation = response.contents[ 0 ].occupation
-        var note = response.contents[ 0 ].notable
-        var died = response.contents[ 0 ].died
 
-        // Create Virtual Page Content
-        var dieddiv = $( '<div>' ).attr( 'id', 'ranperson' ).text( 'Died On This Day' );
-        var pname = $( '<p>' ).attr( 'id', 'ranname' ).text( "Name: " + name );
-        var pocc = $( '<p>' ).attr( 'id', 'ranocc' ).text( "Occucation: " + occupation );
-        var pnote = $( '<p>' ).attr( 'id', 'rannote' ).text( "Noteworthyness: " + note );
-        dieddiv.append( pname, pocc, pnote );
-        $( '.content2' ).append( dieddiv );
 
-    } );
 
-}
+
+
 
 
 
