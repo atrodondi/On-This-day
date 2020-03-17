@@ -6,6 +6,8 @@ $( '#search' ).on( 'click', function ()
 
     event.preventDefault();
     $( '.content2' ).empty();
+    $( '.content5' ).empty();
+    $( '.content6' ).empty();
     getFact();
     getBirthFacts();
     getDeathFact();
