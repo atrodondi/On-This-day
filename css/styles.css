@@ -48,6 +48,7 @@ body {
     font-weight: 900;
     position: relative;
   }
+
   
   .plant {
     position: absolute;
@@ -85,11 +86,12 @@ body {
     transform: rotate(-170deg);
   }
   
-  .plant-background.bottom.right {
+  .strawberry {
+    position: absolute;
     right: 0;
-    transform: rotate(160deg);
-    left: auto;
-    top: 1600px;
+    top: 1250px;
+    overflow: hidden;
+    width: 300px;
   }
   .cake {
     position: absolute;
@@ -98,14 +100,30 @@ body {
     overflow: hidden;
     width: 150px;
   }
-.crying {
+  .green {
+    position: absolute;
+    left: 15px;
+    top: 1650px;
+    overflow: hidden;
+    width: 120px;
+  }
+.banana {
   position: absolute;
     right: 0;
-    top: 1250px;
+    top: 1550px;
     overflow: hidden;
     width: 300px;
     transform: rotate(-15deg);
 }
+.man {
+    position: absolute;
+      right: 0;
+      top: 1950px;
+      overflow: hidden;
+      width: 300px;
+      transform: rotate(5deg);
+}
+
   .plant.right {
     top:900px;
   }
