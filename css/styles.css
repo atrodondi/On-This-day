@@ -91,7 +91,14 @@ body {
     left: auto;
     top: 1600px;
   }
-
+.crying {
+  position: absolute;
+    right: 0;
+    top: 1250px;
+    overflow: hidden;
+    width: 300px;
+    transform: rotate(-15deg);
+}
   .plant.right {
     top:900px;
   }
@@ -136,12 +143,12 @@ body {
     overflow: hidden;
     background-color: #f1f1f1;
   }
-  .content2 {
+  .content2, .content5, .content6 {
     list-style-type: none;
     margin-top: 50px;
   }
   
-  .content2 {
+  .content2, .content5, .content6 {
     position: relative;
     left: 0px;
     list-style: none;

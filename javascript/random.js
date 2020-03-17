@@ -6,6 +6,8 @@ $( '#search' ).on( 'click', function ()
 
     event.preventDefault();
     $( '.content2' ).empty();
+    $( '.content5' ).empty();
+    $( '.content6' ).empty();
     getFact();
     getBirthFacts();
     getDeathFact();
@@ -112,7 +114,7 @@ function getDeathFact ()
         var pocc = $( '<p>' ).attr( 'id', 'ranocc' ).text( "Occucation: " + occupation );
         var pnote = $( '<p>' ).attr( 'id', 'rannote' ).text( "Noteworthyness: " + note );
         dieddiv.append( pname, pocc, pnote );
-        $( '.content2' ).append( dieddiv );
+        $( '.content6' ).append( dieddiv );
 
     } );
 
@@ -168,7 +170,7 @@ function getBirthFacts ()
         var bpocc = $( '<p>' ).attr( 'id', 'ranocc' ).text( "Occucation: " + occupation );
         var bpnote = $( '<p>' ).attr( 'id', 'rannote' ).text( "Noteworthyness: " + note );
         borndiv.append( bpname, bpocc, bpnote );
-        $( '.content2' ).append( borndiv );
+        $( '.content5' ).append( borndiv );
 
     } );
 
