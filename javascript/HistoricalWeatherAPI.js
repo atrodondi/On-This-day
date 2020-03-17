@@ -1,6 +1,6 @@
 function WriteToDOM(pastWeather) {
     // Create Virtual Page Content
-    var divTag = $("<div>").attr("id", "ranperson");
+    var divTag = $("<div>").attr("id", "weather");
     var pSunrise = $("<p>").attr("id", "sunrise").text("Sunrise: " + pastWeather.sunrise);
     var pSunset = $("<p>").attr("id", "sunset").text("Sunset: " + pastWeather.sunset);
     var pMoonPhase = $("<p>").attr("id", "moonPhase").text("Moon Phase: " + pastWeather.moonPhase);
@@ -64,6 +64,8 @@ function Main() {
 
     $("#search").on("click", function () {
         event.preventDefault();
+        $(".content1").empty();
+
 
         // Parse Date
         var input = $("#date").val().trim();
@@ -102,18 +104,6 @@ function Main() {
         // run function that searches weather api guided by user inputs
         // var results = JSONP_PastWeather(pastWeatherInput).done();
         JSONP_PastWeather(pastWeatherInput);
-
-        // event handlers ()???
-        // $(document).ready(function () {
-
-        //     $("#btnLocalWeatherPremium").click(GetLocalWeather);
-        //     $("#btnLocationSearchPremium").click(SearchLocation);
-        //     $("#btnTimeZonePremium").click(GetTimeZone);
-        //     $("#btnMarineWeatherPremium").click(GetMarineWeather);
-        //     $("#btnPastWeatherPremium").click(GetPastWeather);
-
-        // });
-
     })
 
 };
