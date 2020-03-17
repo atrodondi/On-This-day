@@ -153,9 +153,9 @@ $(".btn-primary").on("click", function() {
         "</li>" +
         "<img  class ='img img-fluid' src='" +
         image +
-        "'</img> <div class='d-inline '><p>Strengths</p><li>" +
+        "'</img> <div class='d-inline '><p>Strengths:</p><li>" +
         str +
-        "</li><br><p>Weaknesses</p><li>" +
+        "</li><br><p>Weaknesses:</p><li>" +
         wk +
         "</li></div><br><li>" +
         signDisplay +
