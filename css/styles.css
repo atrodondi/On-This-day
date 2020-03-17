@@ -68,7 +68,7 @@ body {
     height: 500px;
     position: absolute;
     bottom: 0;
-    right: 300px;
+    right: 90px;
     z-index: 0;
     animation: character 3s infinite;
     transform: translateY(50px);
@@ -90,6 +90,13 @@ body {
     transform: rotate(160deg);
     left: auto;
     top: 1600px;
+  }
+  .cake {
+    position: absolute;
+    left: 15px;
+    top: 850px;
+    overflow: hidden;
+    width: 150px;
   }
 .crying {
   position: absolute;
@@ -143,12 +150,12 @@ body {
     overflow: hidden;
     background-color: #f1f1f1;
   }
-  .content2, .content5, .content6 {
+  .content2, .content5, .content6,.content1 {
     list-style-type: none;
     margin-top: 50px;
   }
   
-  .content2, .content5, .content6 {
+  .content2, .content5, .content6,.content1 {
     position: relative;
     left: 0px;
     list-style: none;
