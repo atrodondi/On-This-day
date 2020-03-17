@@ -91,7 +91,14 @@ body {
     left: auto;
     top: 1600px;
   }
-
+.crying {
+  position: absolute;
+    right: 0;
+    top: 1250px;
+    overflow: hidden;
+    width: 300px;
+    transform: rotate(-15deg);
+}
   .plant.right {
     top:900px;
   }
