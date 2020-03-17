@@ -1,212 +1,228 @@
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    overflow-x: hidden;
-  }
-   h2 {
-    line-height: 1;
-    margin: 0;
-    text-transform: uppercase;
-    font-weight: normal;
-  }
-  
-  h2 {
-    font-size: 40px;
-  }
-  nav {
-    z-index: 1;
-    top: 0;
-  }
-  
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  nav li {
-    font-size: 16px;
-    color: black;
-    margin: 25px 12.5px 25px 12.5px;
-    display: inline-block;
-  }
-  
-  nav li a {
-    color: #fff;
-    background: none;
-    font-family: 'Darker Grotesque', sans-serif;
-    font-weight: 400;
-    letter-spacing: 2px;
-    text-decoration: none;
-  }
-  
-  header h1 {
-    font-size: 150px;
-    color: white;
-    letter-spacing: 1px;
-    font-weight: 900;
-    position: relative;
-  }
+  margin: 0;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
 
-  
-  .plant {
-    position: absolute;
-    right: 0;
-    top: 150px;
-    overflow: hidden;
-    width: 300px;
-    transform: rotate(-15deg);
-  }
-  .plant-background {
-    transform: rotate(-240deg);
-    position: absolute;
-    left: -80px;
-    width: 500px;
-    top: 260px;
-  }
-  .character {
-    height: 500px;
-    position: absolute;
-    bottom: 0;
-    right: 90px;
-    z-index: 0;
-    animation: character 3s infinite;
-    transform: translateY(50px);
-  }
+h2 {
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: normal;
+}
 
-  @keyframes character {
-    50% {
-      transform: translateY(-20px);
-    }
-  } 
+h2 {
+  font-size: 40px;
+}
 
-  .plant-background.bottom {
-    top: 530px;
-    transform: rotate(-170deg);
+nav {
+  z-index: 1;
+  top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  font-size: 16px;
+  color: black;
+  margin: 25px 12.5px 25px 12.5px;
+  display: inline-block;
+}
+
+nav li a {
+  color: #fff;
+  background: none;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: 150px;
+  color: white;
+  letter-spacing: 1px;
+  font-weight: 900;
+  position: relative;
+}
+
+
+.plant {
+  position: absolute;
+  right: 0;
+  top: 150px;
+  overflow: hidden;
+  width: 300px;
+  transform: rotate(-15deg);
+}
+
+.plant-background {
+  transform: rotate(-240deg);
+  position: absolute;
+  left: -80px;
+  width: 500px;
+  top: 260px;
+}
+
+.character {
+  height: 500px;
+  position: absolute;
+  bottom: 0;
+  right: 90px;
+  z-index: 0;
+  animation: character 3s infinite;
+  transform: translateY(50px);
+}
+
+@keyframes character {
+  50% {
+    transform: translateY(-20px);
   }
-  
-  .strawberry {
-    position: absolute;
-    right: 0;
-    top: 1250px;
-    overflow: hidden;
-    width: 300px;
-  }
-  .cake {
-    position: absolute;
-    left: 15px;
-    top: 850px;
-    overflow: hidden;
-    width: 150px;
-  }
-  .green {
-    position: absolute;
-    left: 15px;
-    top: 1650px;
-    overflow: hidden;
-    width: 120px;
-  }
+}
+
+.plant-background.bottom {
+  top: 530px;
+  transform: rotate(-170deg);
+}
+
+.strawberry {
+  position: absolute;
+  right: 0;
+  top: 1250px;
+  overflow: hidden;
+  width: 300px;
+}
+
+.cake {
+  position: absolute;
+  left: 15px;
+  top: 850px;
+  overflow: hidden;
+  width: 150px;
+}
+
+.green {
+  position: absolute;
+  left: 15px;
+  top: 1650px;
+  overflow: hidden;
+  width: 120px;
+}
+
 .banana {
   position: absolute;
-    right: 0;
-    top: 1550px;
-    overflow: hidden;
-    width: 300px;
-    transform: rotate(-15deg);
+  right: 0;
+  top: 1550px;
+  overflow: hidden;
+  width: 300px;
+  transform: rotate(-15deg);
 }
+
 .man {
-    position: absolute;
-      right: 0;
-      top: 1950px;
-      overflow: hidden;
-      width: 300px;
-      transform: rotate(5deg);
+  position: absolute;
+  right: 0;
+  top: 1950px;
+  overflow: hidden;
+  width: 300px;
+  transform: rotate(5deg);
 }
 
-  .plant.right {
-    top:900px;
-  }
+.plant.right {
+  top: 900px;
+}
 
-  header {
-    height: 800px;
-    text-align: center;
-    position: relative;
-    margin-bottom: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-attachment: fixed;
-    position: relative;
-    background-color: #f3b70f;
-  }
+header {
+  height: 800px;
+  text-align: center;
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-attachment: fixed;
+  position: relative;
+  background-color: #f3b70f;
+}
 
-  #year{
-    width:17%;
-  }
+#year {
+  width: 17%;
+}
 
-  .collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-  }
-  
-  .active, .collapsible:hover {
-    background-color: #555;
-  }
-  
-  .content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: #f1f1f1;
-  }
-  .content2, .content5, .content6,.content1 {
-    list-style-type: none;
-    margin-top: 50px;
-  }
-  
-  .content2, .content5, .content6,.content1 {
-    position: relative;
-    left: 0px;
-    list-style: none;
-    counter-increment: li;
-    margin: 20px 0;
-    padding-left: 25px;
-    padding-top: 10px;
-    text-transform: uppercase;
-    font-family: 'Darker Grotesque', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
-  
-  .content2 li:last-child {
-    margin-bottom: 50px;
-  }
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
 
-  .content4 {
-    list-style-type: none;
-    margin-top: 50px;
-  }
-  
-  .content4 {
-    position: relative;
-    left: 0px;
-    list-style: none;
-    margin: 20px 0;
-    padding-left: 25px;
-    padding-top: 10px;
-    text-transform: uppercase;
-    font-family: 'Darker Grotesque', sans-serif;
-    letter-spacing: 1px;
-    font-weight: 600;
-  }
-  
- 
+.active,
+.collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.content2,
+.content5,
+.content6,
+.content1,
+.content3 {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.content2,
+.content5,
+.content6,
+.content1,
+.content3 {
+  position: relative;
+  left: 0px;
+  list-style: none;
+  counter-increment: li;
+  margin: 20px 0;
+  padding-left: 25px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-family: 'Darker Grotesque', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.content2 li:last-child {
+  margin-bottom: 50px;
+}
+
+.content4 {
+  list-style-type: none;
+  margin-top: 50px;
+}
+
+.content4 {
+  position: relative;
+  left: 0px;
+  list-style: none;
+  margin: 20px 0;
+  padding-left: 25px;
+  padding-top: 10px;
+  text-transform: uppercase;
+  font-family: 'Darker Grotesque', sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
