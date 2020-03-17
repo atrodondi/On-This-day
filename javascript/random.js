@@ -55,7 +55,7 @@ function getFact ()
         var psubcat = $( '<p>' ).attr( 'id', 'ransub' ).text( "Subcategory: " + subcategory );
         var pfact = $( '<p>' ).attr( 'id', 'ranfact' ).text( "Fact: " + fact );
         factdiv.append( pcat, psubcat, pfact );
-        $( '.content2' ).append( factdiv );
+        $( '.content6' ).append( factdiv );
 
     } );
 
@@ -168,7 +168,7 @@ function getBirthFacts ()
         var bpocc = $( '<p>' ).attr( 'id', 'ranocc' ).text( "Occucation: " + occupation );
         var bpnote = $( '<p>' ).attr( 'id', 'rannote' ).text( "Noteworthyness: " + note );
         borndiv.append( bpname, bpocc, bpnote );
-        $( '.content2' ).append( borndiv );
+        $( '.content5' ).append( borndiv );
 
     } );
 
