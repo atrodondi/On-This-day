@@ -1,4 +1,18 @@
-# Project-1
+ Project title: On This Date 
+ 
+ A web application that allow users to enter their birthday date to get information such as weather, moon phrase, born on this day, died on this day, random facts, astrology and numerology information. Using multiple APIs to give you the information about your special day. 
+
+ Authors 
+ * Dania King:
+ * Alex Rodondi:
+ * Phuong Quyen Le: Front-end design using html, css, datepicker and bootstrap layout. 
+ * Ryan Shepard:
+ * Alvaro Luna: 
+
+ Notable Concepts/Technologies Used:
+ * Jquery/ AJAX
+ * API authorization
+ * Bootstrap 
 
 # Group Do: Designing your MVP
   1. Who is your target audience?
