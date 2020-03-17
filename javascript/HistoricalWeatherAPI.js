@@ -1,11 +1,25 @@
 function WriteToDOM(pastWeather) {
     // Create Virtual Page Content
     var divTag = $("<div>").attr("id", "weather");
-    var pSunrise = $("<p>").attr("id", "sunrise").text("Sunrise: " + pastWeather.sunrise);
-    var pSunset = $("<p>").attr("id", "sunset").text("Sunset: " + pastWeather.sunset);
-    var pMoonPhase = $("<p>").attr("id", "moonPhase").text("Moon Phase: " + pastWeather.moonPhase);
+
+    // weather image tag and description
+    var imgTag = $("<img>").attr("id", "weatherIcon");
+    imgTag.attr("src", pastWeather.imgURL);
+    var descTag = $("<p>").attr("id", "weatherDescription").text(pastWeather.weatherDesc);
+
+    // temperature data
     var pAvgTempF = $("<p>").attr("id", "avgTempF").text("Average Temperature: " + pastWeather.avgTempF + "°F")
-    divTag.append(pSunrise, pSunset, pMoonPhase, pAvgTempF);
+    var pHighTempF = $("<p>").attr("id", "highTempF").text("High Temperature: " + pastWeather.highTempF + "°F")
+    var pLowTempF = $("<p>").attr("id", "lowTempF").text("Low Temperature: " + pastWeather.lowTempF + "°F")
+
+    // precipitation and snow fall data
+    var pPrecip = $("<p>").attr("id", "lowTempF").text("Rainfall: " + pastWeather.precipIn + "in")
+    var pSnow = $("<p>").attr("id", "lowTempF").text("Snowfall: " + pastWeather.snowCm + "cm")
+
+    // moon data
+    var pMoonPhase = $("<p>").attr("id", "moonPhase").text("Moon Phase: " + pastWeather.moonPhase);
+
+    divTag.append(imgTag, descTag, $("<hr>"), pAvgTempF, pHighTempF, pLowTempF, $("<hr>"), pPrecip, pSnow, $("<hr>"), pMoonPhase);
     $(".content1").append(divTag);
 };
 
@@ -37,17 +51,32 @@ function JSONP_PastWeather(input) {
         console.log(response);
 
         // api results
-        sunrise = response.data.weather[0].astronomy[0].sunrise;
-        sunset = response.data.weather[0].astronomy[0].sunset;
-        moonPhase = response.data.weather[0].astronomy[0].moon_phase;
+        imgURL = response.data.weather[0].hourly[4].weatherIconUrl[0].value;
+        weatherDesc = response.data.weather[0].hourly[4].weatherDesc[0].value;
+
         avgTempF = response.data.weather[0].avgtempF;
+        highTempF = response.data.weather[0].maxtempF;
+        lowTempF = response.data.weather[0].mintempF;
+
+        precipIn = response.data.weather[0].hourly[4].precipInches;
+        snowCm = response.data.weather[0].totalSnow_cm;
+
+        moonPhase = response.data.weather[0].astronomy[0].moon_phase;
+
 
         // write to the DOM
         pastWeather = {
-            sunrise: sunrise,
-            sunset: sunset,
+            imgURL: imgURL,
+            weatherDesc: weatherDesc,
+
+            avgTempF: avgTempF,
+            highTempF: highTempF,
+            lowTempF: lowTempF,
+
+            precipIn: precipIn,
+            snowCm: snowCm,
+
             moonPhase: moonPhase,
-            avgTempF: avgTempF
         }
         WriteToDOM(pastWeather);
     });
