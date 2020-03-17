@@ -64,6 +64,8 @@ function Main() {
 
     $("#search").on("click", function () {
         event.preventDefault();
+        $(".content1").empty();
+
 
         // Parse Date
         var input = $("#date").val().trim();
