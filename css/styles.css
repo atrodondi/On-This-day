@@ -87,13 +87,13 @@ body {
   
   .plant-background.bottom.right {
     right: 0;
-    transform: rotate(20deg);
+    transform: rotate(160deg);
     left: auto;
-    top: 2000px;
+    top: 1600px;
   }
-  
+
   .plant.right {
-    top: 2200px;
+    top:900px;
   }
 
   header {
@@ -136,3 +136,45 @@ body {
     overflow: hidden;
     background-color: #f1f1f1;
   }
+  .content2 {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  
+  .content2 {
+    position: relative;
+    left: 0px;
+    list-style: none;
+    counter-increment: li;
+    margin: 20px 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Darker Grotesque', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .content2 li:last-child {
+    margin-bottom: 50px;
+  }
+
+  .content4 {
+    list-style-type: none;
+    margin-top: 50px;
+  }
+  
+  .content4 {
+    position: relative;
+    left: 0px;
+    list-style: none;
+    margin: 20px 0;
+    padding-left: 25px;
+    padding-top: 10px;
+    text-transform: uppercase;
+    font-family: 'Darker Grotesque', sans-serif;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+ 
