@@ -85,7 +85,7 @@ function JSONP_PastWeather(input) {
 // main entry point
 function Main() {
     // api url & key
-    var apiURL = "http://api.worldweatheronline.com/premium/v1/";
+    var apiURL = "https://api.worldweatheronline.com/premium/v1/";
     var apiKey = "0372e7484ec34bf4ae320602201203";
 
     // default inputs
