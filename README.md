@@ -1,6 +1,6 @@
 # On This Date 
- 
  A web application that allow users to enter their birthday date to get information such as weather, moon phrase, born on this day, died on this day, random facts, astrology and numerology information. Using multiple APIs to give you the information about your special day. 
+
 # Motivation 
  One of our teammates was into florida man memes so we were thinking about creating a webapp that will give us specific "florida man memes" for that specific date. All of us were throwing out ideas so we decided to go with users input birthday date and we can give them all cool and unique information for that specific date. 
  
@@ -11,18 +11,20 @@
  * Alex Rodondi:
  * Phuong Quyen Le: Front-end design using html, css, datepicker and bootstrap layout. 
  * Ryan Shepard:
- * Alvaro Luna: 
+ * Alvaro Luna: Back-end implementation of the “World Weather Online” API. Suggested an Office reference site logo. 
 
  # Notable Concepts/Technologies Used:
  * Jquery/ AJAX
  * API authorization
  * Bootstrap 
+
 # Team Efforts and Shoutouts
 Shoutout to everyone in the group for working hard and dedicated your times for this project. 
+Shout out to Alex and Dania for always helping us out with AJAX and JQuery.
+Doubling shouting out Alex and Dania for all their help!
 
-Shout out to Alex and Dania for always helping us out with AJAX and JQuery. 
 # Challenges 
-We were having a hard time to look for free and useful API.
+The hardest challenge was finding APIs that were free and functional. 
 
 # Group Do: Designing your MVP
   1. Who is your target audience?
