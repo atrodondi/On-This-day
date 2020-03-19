@@ -123,7 +123,6 @@ $(".btn-primary").on("click", function() {
       lifePath = dateReduced;
     }
     //now use lifepath number below to correspond to a set of data in an array we can make from a website to populate DOM however.
-    console.log("Life Path #: " + lifePath);
     for (let i = 0; i < lifePathInfo.length; i++) {
       if (lifePath == lifePathInfo[i].id) {
         LPdisplay = lifePathInfo[i].info;
