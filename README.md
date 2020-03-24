@@ -10,7 +10,7 @@ Since birthday comes once a year, it's a momentous occasion and to be commemorat
 
 # Authors
 
-- Dania King:
+- Dania King: Back-end design of Random Facts API
 - Alex Rodondi: Back-end design of Astrology & Numerology Section. Lead Presenter.
 - Phuong Quyen Le: Front-end design using html, css, datepicker and bootstrap layout.
 - Ryan Shepard:
@@ -48,3 +48,6 @@ The hardest challenge was finding APIs that were free and functional.
    1. As a user, I want enter a date into a search box
    2. As a user, I want the page to respond to my search
    3. As a user, I want to search by category
+
+
+ [Link to Deployed Site: On This Day](https://atrodondi.github.io/Project-1/ "On This Day")
